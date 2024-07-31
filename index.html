@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chilly Trade - Formulario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .tarjeta {
+            background-color: #e6f3e6;
+            width: 9cm;
+            height: 20.5cm;
+            padding: 2cm 0.5cm 1cm 0.5cm;
+            box-sizing: border-box;
+            font-size: 8pt;
+            position: relative;
+            overflow: hidden;
+        }
+        h1 {
+            text-align: center;
+            color: #000080;
+            margin: 0 0 0.2cm 0;
+            font-size: 14pt;
+            font-weight: bold;
+        }
+        .info {
+            font-size: 7pt;
+            margin-bottom: 0.3cm;
+        }
+        .fila {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.2cm;
+            align-items: baseline;
+        }
+        .campo {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 0.2cm;
+        }
+        .etiqueta {
+            font-size: 7pt;
+            white-space: nowrap;
+            margin-right: 0.1cm;
+        }
+        input[type="text"] {
+            flex: 1;
+            border: none;
+            border-bottom: 1px solid #000;
+            background-color: white;
+            font-size: 8pt;
+            padding: 0;
+            margin: 0;
+            height: 0.4cm;
+            min-width: 1cm;
+            max-width: 7cm;
+        }
+        .cobrador {
+            float: right;
+            border: 1px solid #000080;
+            padding: 1px 3px;
+            color: #000080;
+            font-size: 7pt;
+        }
+        .finanzas {
+            border: 1px solid #000;
+            padding: 0.2cm;
+            margin: 0.3cm 0;
+        }
+        .finanzas .fila {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.2cm;
+            align-items: baseline;
+        }
+        .finanzas .campo-largo {
+            flex: 3;
+            display: flex;
+            align-items: baseline;
+        }
+        .finanzas .campo-corto {
+            flex: 1;
+            display: flex;
+            align-items: baseline;
+            justify-content: flex-end;
+        }
+        .finanzas input[type="text"] {
+            flex: 1;
+            margin-left: 0.1cm;
+        }
+        .finanzas .campo-corto input[type="text"] {
+            width: 70%;
+        }
+        .referencias {
+            margin-top: 0.3cm;
+        }
+        .referencias p {
+            margin: 0.1cm 0;
+            font-size: 7pt;
+            text-align: center;
+        }
+        .de20 input[type="text"] {
+            flex: 1;
+            border: none;
+            border-bottom: 1px solid #000;
+            background-color: red !important;
+            font-size: 8pt;
+            padding: 0;
+            margin: 0;
+            height: 0.4cm;
+            min-width: 1cm;
+            max-width: 1cm !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="tarjeta">
+        <h1>Mueblería</h1>
+        <div class="info">
+            R.F.C. YTEG-873872-HD7<br>
+            Matamoros # 390 Col. Rivera<br>
+            Tel. 654 123-45-67 Bravo, Durango.
+            <span class="cobrador">COBRADOR</span>
+        </div>
+        <div class="fila">
+            <div class="campo" style="flex: 3;">
+                <span class="etiqueta">Promoción</span>
+                <input type="text">
+            </div>
+            <div class="campo" style="flex: 2;">
+                <span class="etiqueta">Cta. No.</span>
+                <input type="text">
+            </div>
+        </div>
+        <div class="fila">
+            <div class="campo" style="flex: 3;">
+                <span class="etiqueta">Fecha</span>
+                <input type="text">
+            </div>
+            <div class="campo" style="flex: 2;">
+                <span class="etiqueta">Vendió</span>
+                <input type="text">
+            </div>
+        </div>
+        <div class="campo">
+            <span class="etiqueta">Señor(a)</span>
+            <input type="text">
+        </div>
+        <div class="campo">
+            <span class="etiqueta">Domicilio</span>
+            <input type="text">
+        </div>
+        <input type="text" style="width: 100%;">
+        <div class="fila">
+            <div class="campo" style="flex: 3;">
+                <span class="etiqueta">Sector</span>
+                <input type="text">
+            </div>
+            <div class="campo" style="flex: 2;">
+                <span class="etiqueta">Tel.</span>
+                <input type="text">
+            </div>
+        </div>
+        
+        <div class="finanzas">
+            <div class="fila">
+                <div class="campo-largo">
+                    <span class="etiqueta">Artículo</span>
+                    <input type="text">
+                </div>
+                <div class="campo-corto">
+                    <span class="etiqueta">$</span>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="fila">
+                <div class="campo-largo">
+                    <span class="etiqueta">Entregado al recibir</span>
+                    <input type="text">
+                </div>
+                <div class="campo-corto">
+                    <span class="etiqueta">$</span>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="fila">
+                <div class="campo-largo">
+                    <span class="etiqueta">Saldo por Liquidar</span>
+                    <input type="text">
+                </div>
+                <div class="campo-corto">
+                    <span class="etiqueta">$</span>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="fila">
+                <div class="campo-largo">
+                    <span class="etiqueta">Forma de Pago</span>
+                    <input type="text">
+                </div>
+                <div class="campo-corto">
+                    <span class="etiqueta">$</span>
+                    <input type="text">
+                </div>
+            </div>
+        </div>
+        
+        <div class="campo">
+            <span class="etiqueta">Esposo</span>
+            <input type="text">
+        </div>
+        <div class="campo">
+            <span class="etiqueta">Trabaja en</span>
+            <input type="text">
+        </div>
+        <div class="campo">
+            <span class="etiqueta">Domicilio</span>
+            <input type="text">
+        </div>
+        
+        <div class="referencias">
+            <p>Referencias de familia o amigo que no viva en la misma casa</p>
+            <div class="campo">
+                <span class="etiqueta">1a. Ref. Nombre</span>
+                <input type="text">
+            </div>
+            <div class="campo">
+                <span class="etiqueta">Domicilio</span>
+                <input type="text">
+            </div>
+            <div class="fila">
+                <div class="campo" style="flex: 3;">
+                    <span class="etiqueta">Colonia</span>
+                    <input type="text">
+                </div>
+                <div class="campo" style="flex: 2;">
+                    <span class="etiqueta">Tel.</span>
+                    <input type="text">
+                </div>
+            </div>
+            
+            <div class="campo">
+                <span class="etiqueta">2a. Ref. Nombre</span>
+                <input type="text">
+            </div>
+            <div class="campo">
+                <span class="etiqueta">Domicilio</span>
+                <input type="text">
+            </div>
+            <div class="fila">
+                <div class="campo" style="flex: 3;">
+                    <span class="etiqueta">Colonia</span>
+                    <input type="text">
+                </div>
+                <div class="campo" style="flex: 2;">
+                    <span class="etiqueta">Tel.</span>
+                    <input type="text">
+                </div>
+            </div>
+        </div>
+        
+        <div class="fila" style="margin-top: 0.3cm;">
+            <div class="campo" style="flex: 2;">
+                <span class="etiqueta">Piedras Negras, Coah.</span>
+                <input type="text">
+            </div>
+            <div class="campo" style="flex: 1;">
+                <span class="etiqueta">de 20</span>
+                <input type="text" class="de20">
+            </div>
+        </div>
+        <div class="campo">
+            <span class="etiqueta">Reviso</span>
+            <input type="text">
+        </div>
+    </div>
+</body>
+</html>
